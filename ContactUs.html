@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="h-full">
+<head>
+  <title>Contact Us - Student Registration</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen h-full font-sans text-white flex flex-col bg-gradient-to-r from-purple-500 to-pink-500">
+  <header class="bg-white text-black py-4 shadow-md">
+    <div class="container mx-auto px-4 flex items-center justify-between">
+      <h1 class="text-2xl font-bold">Student Registration</h1>
+      <nav class="ml-auto">
+        <ul class="flex gap-6 text-lg">
+          <li><a href="index.html" class="text-gray-800 hover:text-blue-600">Home</a></li>
+          <li><a href="biodata.html" class="text-gray-800 hover:text-blue-600">Biodata</a></li>
+          <li><a href="freePage.html" class="text-gray-800 hover:text-blue-600">FreePage</a></li>
+          <li><a href="Posts.html" class="text-gray-800 hover:text-blue-600">Posts</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="flex-grow px-6 py-10">
+    <section class="max-w-2xl mx-auto bg-white text-gray-800 rounded-lg shadow-lg p-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">Student Registration Form</h2>
+      <form id="registrationForm">
+        <div class="mb-4">
+          <label for="fullName" class="block font-bold mb-2">Full Name:</label>
+          <input type="text" id="fullName" name="fullName" class="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-purple-500" placeholder="Enter your full name">
+        </div>
+        <div class="mb-4">
+          <label for="studentID" class="block font-bold mb-2">Student ID (NIM):</label>
+          <input type="text" id="studentID" name="studentID" class="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-purple-500" placeholder="Enter your student ID">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block font-bold mb-2">Email Address:</label>
+          <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-purple-500" placeholder="Enter your email">
+          <div class="mb-4">
+            <label for="faculty" class="block font-bold mb-2">Faculty/Major:</label>
+            <select id="faculty" name="faculty" class="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-purple-500">
+              <option value="">Select Faculty/Major</option>
+              <option value="Faculty of Economics">Faculty of Economics</option>
+              <option value="Faculty of Information Technology">Faculty of Information Technology</option>
+              <option value="Nursing Faculty">Nursing Faculty</option>
+              <option value="Faculty of Education">Faculty of Education</option>
+              <option value="Faculty of Philosophy">Faculty of Philosophy</option>
+              <option value="Faculty of Mathematics and Science">Faculty of Mathematics and Science</option>
+            </select>
+          </div>
+        <div class="mb-4">
+          <label for="dob" class="block font-bold mb-2">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" class="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-purple-500">
+        </div>
+
+        <div class="mb-4">
+          <label class="block font-bold mb-2">Gender:</label>
+          <label class="inline-flex items-center">
+            <input type="radio" name="gender" value="Male" class="mr-2"> Male
+          </label>
+          <label class="inline-flex items-center ml-4">
+            <input type="radio" name="gender" value="Female" class="mr-2"> Female
+          </label>
+        </div>
+
+        <div class="mb-4">
+          <label for="address" class="block font-bold mb-2">Address:</label>
+          <textarea id="address" name="address" rows="3" class="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-purple-500" placeholder="Enter your address"></textarea>
+        </div>
+
+        <div class="mb-4">
+          <label for="phone" class="block font-bold mb-2">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" class="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-purple-500" placeholder="Enter your phone number">
+        </div>
+
+        <div class="text-center">
+          <button type="button" onclick="validateForm()" class="bg-purple-500 text-white font-bold py-2 px-6 rounded-md hover:bg-purple-600 focus:ring-2 focus:ring-purple-500">Submit</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script>
+    function validateForm() {
+      const fullName = document.getElementById('fullName').value.trim();
+      const studentID = document.getElementById('studentID').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const faculty = document.getElementById('faculty').value;
+      const dob = document.getElementById('dob').value;
+      const gender = document.querySelector('input[name="gender"]:checked');
+      const address = document.getElementById('address').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+
+      if (!fullName || !studentID || !email || !faculty || !dob || !gender || !address || !phone) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      if (!email.includes('@') || !email.includes('.')) {
+        alert('Please enter a valid email address. It must include "@" and "."');
+        return;
+      }
+
+      if (isNaN(phone) || phone.length < 10) {
+        alert('Phone number must be numeric and at least 10 digits.');
+        return;
+      }
+
+      alert('Form submitted successfully!');
+      document.getElementById('registrationForm').reset();
+    }
+  </script>
+  <footer class="bg-[#172B4D] text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center sm:text-left">
+        <div>
+          <h3 class="text-lg font-bold mb-2">About Trello</h3>
+          <p class="text-sm text-gray-300">What’s behind the boards.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-2">Jobs</h3>
+          <p class="text-sm text-gray-300">Learn about open roles on the Trello team.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-2">Apps</h3>
+          <p class="text-sm text-gray-300">Download the Trello App for your Desktop or Mobile devices.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-2">Contact Us</h3>
+          <p class="text-sm text-gray-300">Need anything? Get in touch and we can help.</p>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-600 my-6"></div>
+      <div class="flex flex-col sm:flex-row justify-between items-center">
+        <div class="flex items-center space-x-4 text-sm text-gray-300">
+          <div class="flex items-center">
+            <img src="web-logo-png-white-7.png" alt="Language" class="h-5 w-5 mr-2">
+            <span>English</span>
+          </div>
+          <a href="#" class="hover:text-white">Privacy Policy</a>
+          <a href="#" class="hover:text-white">Terms</a>
+          <span>© 2024 Atlassian</span>
+        </div>
+        <div class="flex space-x-4 mt-6 sm:mt-0 text-center text-sm text-gray-300">
+          <a href="https://fti.unai.edu" class="hover:text-white">Situs FTI UNAI</a>
+          <a href="https://unai.edu" class="hover:text-white">Situs web UNAI</a>
+        </div>
+        <div class="flex space-x-4 mt-4 sm:mt-0">
+          <a href="#" class="text-gray-300 hover:text-white">
+            <img src="Twitter.png" alt="Twitter" class="h-6 w-6">
+          </a>
+          <a href="#" class="text-gray-300 hover:text-white">
+            <img src="linkedln.webp" alt="LinkedIn" class="h-6 w-6">
+          </a>
+          <a href="#" class="text-gray-300 hover:text-white">
+            <img src="facebook.png" alt="Facebook" class="h-6 w-6">
+          </a>
+          <a href="#" class="text-gray-300 hover:text-white">
+            <img src="yt.webp" alt="YouTube" class="h-6 w-6">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

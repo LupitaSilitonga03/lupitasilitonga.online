@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="h-full">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white font-sans min-h-screen flex flex-col">
+
+  <!-- Header with Purple Gradient Background -->
+  <header class="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-4">
+    <div class="container mx-auto px-4 flex items-center justify-between">
+      <h1 class="text-2xl font-bold">Galeri Langit dan Senja</h1>
+      <nav class="ml-auto">
+        <ul class="flex gap-6 text-lg">
+          <li><a href="index.html" class="text-gray-800 hover:text-blue-600">Home</a></li>
+          <li><a href="biodata.html" class="text-gray-800 hover:text-blue-600">Biodata</a></li>
+          <li><a href="ContactUs.html" class="text-gray-800 hover:text-blue-600">ContactUs</a></li>
+          <li><a href="Posts.html" class="text-gray-800 hover:text-blue-600">Posts</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content (White Background) -->
+  <main class="flex-grow container mx-auto px-4 mt-8 space-y-12">
+    <!-- Project Gallery -->
+    <section>
+      <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">Galeri Langit di Unai</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- First Row -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="gambar1.jpg" alt="Langit Senja" class="w-full h-60 object-cover object-[center_70%]">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg text-gray-800">Langit Senja 1</h3>
+            <p class="text-sm text-gray-600">"Momen tenang saat senja menyalakan langit dengan keindahan."</p>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="gambar2.jpg" alt="Langit Senja" class="w-full h-60 object-cover object-[center_50%]">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg text-gray-800">Langit Senja 2</h3>
+            <p class="text-sm text-gray-600">Keheningan langit yang tenang di malam hari</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="gambar3.jpg" alt="Langit Senja" class="w-full h-60 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg text-gray-800">Langit Senja 3</h3>
+            <p class="text-sm text-gray-600">"Senja yang tenang, dengan warna yang bercerita tentang kedamaian."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Row (Foto 4 and Foto 5) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="gambar4.jpg" alt="Langit Senja" class="w-full h-60 object-cover object-[center_80%]">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg text-gray-800">Langit Senja 4</h3>
+            <p class="text-sm text-gray-600">"Keindahan langit senja yang menyenangkan hati."</p>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="gambar5.jpg" alt="Langit Senja" class="w-full h-60 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg text-gray-800">Langit Senja 5</h3>
+            <p class="text-sm text-gray-600">"Keindahan senja yang menyatu dengan kedamaian malam."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Section -->
+    <!-- Additional Section -->
+<section>
+  <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">Rekomendasi Menarik</h2>
+  <div class="bg-white p-6 rounded-lg shadow-2xl hover:shadow-[0px_10px_15px_rgba(0,0,0,0.2)] transition-shadow duration-300 text-gray-800 mb-12">
+    <h3 class="text-lg font-semibold mb-2">Tempat Belajar HTML yang menariik</h3>
+    <p class="mb-4">Bingung mau belajar HTML di mana? Ini rekomendasi untuk kamu:</p>
+    <a href="https://frontendmasters.com/courses/intermediate-html-css/" 
+    class="text-blue-700 font-medium hover:underline">Frontend Masters</a>
+
+    <h3 class="text-lg font-semibold mt-6 mb-2">Lagu galau yang penuh perasaan</h3>
+    <p class="mb-4">Ingin menikmati lagu galau yang penuh emosi? Dengarkan rekomendasi ini:</p>
+    <a href="https://open.spotify.com/intl-id/artist/47z98pKd71yIbgXwe9LPVC?si=nKpPXwagQf6Onlyg8sHvlg" 
+    class="text-blue-700 font-medium hover:underline">Spotify - Bernadya</a>
+    
+    <p class="text-gray-600">Lagu-lagu Bernadya cocok banget untuk kamu yang ingin mendengarkan musik dengan lirik yang menyentuh, 
+      ditambah dengan suara lembutnya yang bikin nyaman!</p>
+  </div>
+</section>
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#172B4D] text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center sm:text-left">
+        <div>
+          <h3 class="text-lg font-bold mb-2">About Trello</h3>
+          <p class="text-sm text-gray-300">What’s behind the boards.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-2">Jobs</h3>
+          <p class="text-sm text-gray-300">Learn about open roles on the Trello team.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-2">Apps</h3>
+          <p class="text-sm text-gray-300">Download the Trello App for your Desktop or Mobile devices.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-2">Contact Us</h3>
+          <p class="text-sm text-gray-300">Need anything? Get in touch and we can help.</p>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-600 my-6"></div>
+      <div class="flex flex-col sm:flex-row justify-between items-center">
+        <div class="flex items-center space-x-4 text-sm text-gray-300">
+          <div class="flex items-center">
+            <img src="web-logo-png-white-7.png" alt="Language" class="h-5 w-5 mr-2">
+            <span>English</span>
+          </div>
+          <a href="#" class="hover:text-white">Privacy Policy</a>
+          <a href="#" class="hover:text-white">Terms</a>
+          <span>© 2024 Atlassian</span>
+        </div>
+        <div class="flex space-x-4 mt-6 sm:mt-0 text-center text-sm text-gray-300">
+          <a href="https://fti.unai.edu" class="hover:text-white">Situs FTI UNAI</a>
+          <a href="https://unai.edu" class="hover:text-white">Situs web UNAI</a>
+        </div>
+
+        <div class="flex space-x-4 mt-4 sm:mt-0">
+          <a href="#" class="text-gray-300 hover:text-white">
+            <img src="Twitter.png" alt="Twitter" class="h-6 w-6">
+          </a>
+          <a href="#" class="text-gray-300 hover:text-white">
+            <img src="linkedln.webp" alt="LinkedIn" class="h-6 w-6">
+          </a>
+          <a href="#" class="text-gray-300 hover:text-white">
+            <img src="facebook.png" alt="Facebook" class="h-6 w-6">
+          </a>
+          <a href="#" class="text-gray-300 hover:text-white">
+            <img src="yt.webp" alt="YouTube" class="h-6 w-6">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
